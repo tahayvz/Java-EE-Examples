@@ -12,11 +12,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
 	
+	/* //both get and post work in this request
+	
+	@RequestMapping(value = "/")
+  	public String fncHomePst(Model model) {
+	model.addAttribute("data", dataResult());
+	return "home";
+	}*/
+	
 	// index fnc call
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String fncHome(Model model) {
-		model.addAttribute("data", dataResult());
+		model.addAttribute("data", dataResult()); //data is just name used in home.jsp
+		model.addAttribute("datatwo", proglang());
 		return "home";
+
 	}
 	
 	/* @RequestMapping(value = "/", method = RequestMethod.POST)
@@ -34,38 +44,41 @@ public class HomeController {
 			model.addAttribute("fail", "Lütfen þifre giriniz");
 		}else {
 			System.out.println("mail : "+ mail + " password: " + password);
-			if(mail.equals("ali@ali.com") && password.equals("12345")) {
+		if(mail.equals("taha@yavuz.com") && password.equals("123")) {
 				// redirect page
-				return "redirect:/detail/ali@ali.com";
-			}else {
+				return "redirect:/detail/taha@yavuz.com";
+		}else {
 				model.addAttribute("fail", "Kullanýcý adý yada þifre hatalý!");
 			}
 		}
-		model.addAttribute("data", dataResult()); //this line show arraylist 
-		
-	
+		model.addAttribute("data", dataResult()); 
+		model.addAttribute("datatwo", proglang());
 
+		/* when made post this line again call dataresult(). If this line become comment line then firstly 
+		   arraylist come with get method but when calling post method arraylist is not shown. Because in post
+		   there is not dataresult() attribute 
+		*/
+		
 		return "home";
 	}
 	
-	/* //both get and post work in this request
-		
-		@RequestMapping(value = "/")
-	  	public String fncHomePst(Model model) {
-		model.addAttribute("data", dataResult());
-		return "home";
-		}
-	 */
 	
 	// data result
 	public ArrayList<String> dataResult() {
 		ArrayList<String> ls = new ArrayList<String>();
 			// data add
-			ls.add("Burma Kadayýf");
-			ls.add("Peynirli Künefe");
-			ls.add("Fýstýklý Baklava");
-			ls.add("Maraþ Dondurmasý");
-			ls.add("Urfa Kaçak Çay");
+			ls.add("Burma Kadayif");
+			ls.add("Peynirli Kunefe");
+			ls.add("Fistikli Baklava");
+			ls.add("Maras Dondurma");
+		return ls;
+	}
+	
+	public ArrayList<String> proglang() {
+		ArrayList<String> ls=new ArrayList<String>();
+			ls.add("Cay");
+			ls.add("Kola");
+			ls.add("Soda");
 		return ls;
 	}
 	

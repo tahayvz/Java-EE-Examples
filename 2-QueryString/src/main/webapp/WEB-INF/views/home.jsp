@@ -8,17 +8,37 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 <div class="container" >
 
-<h1>Şampiyon Galatasaray</h1>
+<h1>Menü</h1>
+<hr/>
+<div class="row">
+<div class="col-sm-6">
+<h3>Tatlılar</h3>
+<hr/>
 <c:if test="${ not empty data }">
-	<c:forEach items="${data }" var="item">
+	<c:forEach items="${data }" var="item">  
+	<%--data is just name indicated at homecontroller.java. item is name used in this file--%>		
 		<div><a href='<s:url value="/detail/${item }"></s:url>'>${item }</a></div>
 	</c:forEach>
 </c:if>
+</div>
+
+<div class="col-sm-6">
+<h3>İçecekler</h3>
+<hr/>
+<c:if test="${ not empty datatwo }">
+	<c:forEach items="${datatwo }" var="itemtwo">  
+		<div><a href='<s:url value="/detail/${itemtwo }"></s:url>'>${itemtwo }</a></div>
+	</c:forEach>
+</c:if>
+</div>
+
+</div>
 <hr/>
 
 <div class="row">
@@ -34,6 +54,7 @@
 <form method="post">
 	<input name="mail" type="email" class="form-control" placeholder="E-mail" />
 	<br><input name="password" type="password" class="form-control" placeholder="Password" />
+	
 	<br><input type="submit" value="Send" class="btn btn-success" />
 </form>
 </div>
