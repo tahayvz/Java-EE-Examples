@@ -1,6 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -31,8 +30,7 @@
 			      <th scope="col">BAŞLIK</th>
 			      <th scope="col">FİYAT</th>
 			      <th scope="col">RESİM</th>
-			      <th scope="col">DURUM</th>
-			      
+			      <th scope="col">DURUM</th>		      
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -43,17 +41,15 @@
 				      <td>${item.title }</td>
 				      <td>${item.price }</td>
 				      <td><img src="${item.img }" width="150" class="img-responsive"/></td>
-					<td>  <a href='<s:url value="/delete/${item.id }"></s:url>' class="btn btn-danger">Sil</a> 	</td>			  	 
+					  <td><a href='<s:url value="/delete/${item.id }"></s:url>' class="btn btn-danger">Sil</a></td>			  	 
+						
 				  	  </tr>
 				    </c:forEach>
-				    
 				 </c:if>
 			  </tbody>
 			</table>
 	</div>
 </div>
-
-
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
