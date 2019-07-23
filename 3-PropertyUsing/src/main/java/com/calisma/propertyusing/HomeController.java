@@ -32,7 +32,6 @@ public class HomeController {
 		//System.out.println(crs.getTitle());
 		count++;
 		crs.setId(count);
-		siralama();
 		carlist.add(crs);
 		return "redirect:/"; //redirect call requestMethod.GET. Redirect used for post just one time. If redirect not used, post is sent each time the page is refreshed.
 	}
@@ -53,25 +52,6 @@ public class HomeController {
 		return s;
 	}
 	
-		public void siralama() {
-			   int temp;
-			   for (int i = 0; i < count; i++) {
-			    for (int j = i; j > 0; j--) {
-			    	if(carlist.get(j)!=null) {
-			     if (carlist.get(j).getPrice() < carlist.get(j-1).getPrice()) {
-			    	 int x=carlist.get(j).getId();
-			    	 int y=carlist.get(j-1).getId();
-			      temp = carlist.get(j).getId();
-			    
-			      x=y;
-			     y=temp;
-			     carlist.get(j).setId(x);
-			     carlist.get(j-1).setId(y);
-			     }}
-			    }
-			   }
-			 
-
-		      }   		
+  		
 		}
 

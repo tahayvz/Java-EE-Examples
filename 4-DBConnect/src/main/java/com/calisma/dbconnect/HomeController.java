@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -28,14 +29,16 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value="/", method=RequestMethod.POST)
-	public String insert() {
+	public String insert(UserPro us) {
 		try {
-			String query="INSERT INTO `users` (`uid`, `uname`, `usurname`, `umail`, `upassword`) VALUES (NULL, ?, ?, ?, ?)";
+			String query="INSERT INTO `users`(`uid`, `uname`, `usurname`, `umail`, `upassword`, `uresim`, `uprice`) VALUES (null,?,?,?,?,?,?)";
 			PreparedStatement pre= db.connect(query);
-			pre.setString(1, "Leyla"); //if db column is int, we used setInt 
-			pre.setString(2,"Bilki");
-			pre.setString(3,"leyla@mail.com");
-			pre.setString(4,"123456");
+			pre.setString(1, us.getUname());
+			pre.setString(2, us.getUsurname());
+			pre.setString(3, us.getUmail());
+			pre.setString(4, us.getUpassword());
+			pre.setString(5, us.getUresim());
+			pre.setString(6, us.getUprice());
 			pre.executeUpdate();
 		} catch (Exception e) {
 			System.err.println("insert error: "+ e);
@@ -56,14 +59,18 @@ public class HomeController {
 				String usurname=rs.getString("usurname");
 				String umail=rs.getString("umail");
 				String upassword=rs.getString("upassword");
-				
+				String uresim=rs.getString("uresim");
+				String uprice=rs.getString("uprice");
+
 				UserPro us=new UserPro();
 				us.setUid(uid);
 				us.setUname(uname);
 				us.setUsurname(usurname);
 				us.setUmail(umail);
 				us.setUpassword(upassword);
-				
+				us.setUresim(uresim);
+				us.setUprice(uprice);
+
 				ls.add(us);
 			}
 		} catch (Exception e) {
@@ -71,12 +78,13 @@ public class HomeController {
 		}
 		return ls;
 	} 
-	@RequestMapping(value="/delete", method=RequestMethod.POST)
-	public String delete() {	//Since java is going to the outside again, we use try catch
+
+	@RequestMapping(value="/delete/{id}", method=RequestMethod.POST)
+	public String delete(@PathVariable int id) {	//Since java is going to the outside again, we use try catch
 		try {
 			String query="DELETE FROM `users` WHERE `users`.`uid` = ?"; //press delete button in database, copy output
 			PreparedStatement pre=db.connect(query); //query is used for select only
-			pre.setInt(1, 3); //1 is first question mark, 3 is uid 
+			pre.setInt(1, id ); //1 is first question mark, second is uid 
 			int statu=pre.executeUpdate(); //freezes the rows affected
 			if(statu>0) {
 				System.out.println("sime islemi basarili");
