@@ -28,6 +28,7 @@ public class HomeController {
 		return "home";
 	}
 	
+	//insert into database
 	@RequestMapping(value="/", method=RequestMethod.POST)
 	public String insert(UserPro us) {
 		try {
@@ -44,13 +45,14 @@ public class HomeController {
 			System.err.println("insert error: "+ e);
 		}	
 		return "redirect:/"; 
-		//redirect used when used add, delet, set operations. if use return "home" doesn't appear last added data when pressed kaydet
+		//redirect used when used add, delete, set operations. if use return "home" doesn't appear last added data when pressed submit
 	}
 	
-	public List<UserPro> dataResult(){ 	//import java.util
+	//take from database add list
+	public List<UserPro> dataResult(){ 	
 		List<UserPro> ls= new ArrayList<UserPro>();
 		try {
-			String query="SELECT * FROM `users`";	 //taken in database gözat tab 
+			String query="SELECT * FROM `users`";	 
 			PreparedStatement pre=db.connect(query);
 			ResultSet rs= pre.executeQuery(); //we can consume all queries
 			while(rs.next()) { //retrieves data every step in the database

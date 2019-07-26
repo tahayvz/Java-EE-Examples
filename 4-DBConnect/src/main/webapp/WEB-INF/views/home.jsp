@@ -50,13 +50,17 @@
 				      <td>${item.umail }</td>						
 				      <td>${item.upassword }</td>
 				      <td>${item.uprice }</td>
-				      <td><img src="${item.uresim }" width="150" class="img-responsive"/></td>
-				      
+				      <td><img src="${item.uresim }" width="150" class="img-responsive"/></td>	      
 				      
 				    <td>  <form action="delete/${item.uid }" method="post">
 						<input type="submit" value="Sil" class="btn btn-danger"/>
 					</form>	</td>					
-					<!-- <td><a href='<s:url value="/delete/${item.uid }"></s:url>' class="btn btn-danger">Sil</a></td> -->	  			  	 
+					   <td> 
+					<td>  <form action="detail/${item.uid }" method="get">
+						<input type="submit" value="Edit" />
+					</form>	</td>					
+					   <td> 
+
 				  	  </tr>
 				    </c:forEach>
 				 </c:if>
