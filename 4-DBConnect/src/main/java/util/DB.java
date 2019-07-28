@@ -17,11 +17,11 @@ public class DB {
 	
 	
 	private Connection con= null;
-	private PreparedStatement st;
+	private PreparedStatement st; //The performance of the application will be faster if you use PreparedStatement interface because query is compiled only once.
 	public DB() { //the object works as soon as it is handled	
 		try {
-			Class.forName(driver); //triggered MySQL library
-			con = DriverManager.getConnection(url+dbName,dbUser, dbPass);
+			Class.forName(driver); //triggered MySQL library.The forName() method of Class class is used to register the driver class. This method is used to dynamically load the driver class.
+			con = DriverManager.getConnection(url+dbName,dbUser, dbPass); //establish connection with the Oracle database
 			System.out.println("baglanti basarili");
 		} catch (Exception e) {
 			System.err.println("Baglanti hatasi: " + e);

@@ -33,7 +33,7 @@ public class HomeController {
 	public String insert(UserPro us) {
 		try {
 			String query="INSERT INTO `users`(`uid`, `uname`, `usurname`, `umail`, `upassword`, `uresim`, `uprice`) VALUES (null,?,?,?,?,?,?)";
-			PreparedStatement pre= db.connect(query);
+			PreparedStatement pre= db.connect(query); 
 			pre.setString(1, us.getUname());
 			pre.setString(2, us.getUsurname());
 			pre.setString(3, us.getUmail());
@@ -54,8 +54,8 @@ public class HomeController {
 		try {
 			String query="SELECT * FROM `users`";	 
 			PreparedStatement pre=db.connect(query);
-			ResultSet rs= pre.executeQuery(); //we can consume all queries
-			while(rs.next()) { //retrieves data every step in the database
+			ResultSet rs= pre.executeQuery(); //we can consume all queries. This method returns the object of ResultSet that can be used to get all the records of a table.
+			while(rs.next()) { //retrieves data every step in the database. rs.next() is used to move the cursor to the one row next from the current position.
 				int uid= rs.getInt("uid"); //rs goes to database calls the first uid
 				String uname=rs.getString("uname");
 				String usurname=rs.getString("usurname");
@@ -87,7 +87,7 @@ public class HomeController {
 			String query="DELETE FROM `users` WHERE `users`.`uid` = ?"; //press delete button in database, copy output
 			PreparedStatement pre=db.connect(query); //query is used for select only
 			pre.setInt(1, id ); //1 is first question mark, second is uid 
-			int statu=pre.executeUpdate(); //freezes the rows affected
+			int statu=pre.executeUpdate(); //freezes the rows affected.is used to execute specified query, it may be create, drop, insert, update, delete etc.
 			if(statu>0) {
 				System.out.println("sime islemi basarili");
 			}

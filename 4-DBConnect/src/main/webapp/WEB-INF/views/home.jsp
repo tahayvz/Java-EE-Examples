@@ -52,16 +52,11 @@
 				      <td>${item.uprice }</td>
 				      <td><img src="${item.uresim }" width="150" class="img-responsive"/></td>	      
 				      
-				    <td>  <form action="delete/${item.uid }" method="post">
+				  	  <td>  <form action="delete/${item.uid }" method="post">
 						<input type="submit" value="Sil" class="btn btn-danger"/>
-					</form>	</td>					
-					   <td> 
-					<td>  <form action="detail/${item.uid }" method="get">
-						<input type="submit" value="Edit" />
-					</form>	</td>					
-					   <td> 
-
-				  	  </tr>
+							</form>	
+					  </td>					
+			  	  </tr>
 				    </c:forEach>
 				 </c:if>
 			  </tbody>
