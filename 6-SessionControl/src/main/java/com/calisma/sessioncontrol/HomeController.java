@@ -25,7 +25,7 @@ public class HomeController {
 		if(mail.equals("ali@ali.com") && password.equals("12345")) 
 		{
 			// session create
-			req.getSession().setAttribute("user_id", 10);//delete just user_id session
+			req.getSession().setAttribute("user_id", 10);
 
 			return "redirect:/dashboard"; 
 		}
@@ -36,7 +36,7 @@ public class HomeController {
 	// exit call
 	@RequestMapping(value = "/exit", method = RequestMethod.GET)
 	public String exit(HttpServletRequest req) {
-		req.getSession().removeAttribute("user_id");
+		req.getSession().removeAttribute("user_id");//delete just user_id session
 		req.getSession().invalidate(); // delete all session
 		return "redirect:/";
 	}
