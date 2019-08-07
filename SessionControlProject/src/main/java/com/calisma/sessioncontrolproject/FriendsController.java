@@ -22,6 +22,8 @@ public class FriendsController {
 	@RequestMapping(value="/friends", method= RequestMethod.GET)
 	public String allContact(Model model, HttpServletRequest req) {
 		model.addAttribute("tableData", tableResult());
+		IncluderController.page="friends";
+
 		return Util.control(req, "friends");
 	}
 	

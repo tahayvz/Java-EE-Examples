@@ -22,6 +22,8 @@ public class FamilyController {
 	@RequestMapping(value="/family", method= RequestMethod.GET)
 	public String allContact(Model model, HttpServletRequest req) {
 		model.addAttribute("tableData", tableResult());
+		IncluderController.page="family";
+
 		return Util.control(req, "family");
 	}
 	

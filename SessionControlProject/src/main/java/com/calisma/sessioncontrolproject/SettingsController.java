@@ -22,6 +22,7 @@ DB db=new DB();
 	@RequestMapping(value = "/settings", method = RequestMethod.GET)
 	public String settings(Locale locale, Model model, HttpServletRequest req) {
 		model.addAttribute("tableData", tableResult());
+		IncluderController.page="settings";
 		return Util.control(req, "settings"); 
 		// if use return "settings"; then go to http://localhost:8280/sessioncontrol/settings page will open so does not require password
 	}

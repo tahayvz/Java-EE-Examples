@@ -22,6 +22,8 @@ public class OtherController {
 	@RequestMapping(value="/other", method= RequestMethod.GET)
 	public String allContact(Model model, HttpServletRequest req) {
 		model.addAttribute("tableData", tableResult());
+		IncluderController.page="other";
+
 		return Util.control(req, "other");
 	}
 	

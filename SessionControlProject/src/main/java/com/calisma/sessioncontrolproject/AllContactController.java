@@ -20,9 +20,15 @@ public class AllContactController {
 	@RequestMapping(value="/allContact", method= RequestMethod.GET)
 	public String allContact(Model model, HttpServletRequest req) {
 		model.addAttribute("tableData", tableResult());
+		IncluderController.page="allContact";
+
 		return Util.control(req, "allContact");
 	}
-	
+	@RequestMapping(value="/search", method= RequestMethod.POST)
+	public String search(Model model, HttpServletRequest req) {
+		model.addAttribute("tableData", tableResult());
+		return Util.control(req, "search");
+	}
 	
 	// table result
 	public List<TablePro> tableResult() {

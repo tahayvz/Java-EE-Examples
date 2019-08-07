@@ -24,6 +24,8 @@ public class UpdatePageController {
 		model.addAttribute("tablePro", tableResult(crid));
 		model.addAttribute("catData", new DashBoardController().catResult());
 		System.out.println("crid : " + crid);
+		IncluderController.page="update";
+
 		return Util.control(req, "update");
 	}
 	

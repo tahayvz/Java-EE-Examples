@@ -22,6 +22,8 @@ public class WorkController {
 	@RequestMapping(value="/work", method= RequestMethod.GET)
 	public String allContact(Model model, HttpServletRequest req) {
 		model.addAttribute("tableData", tableResult());
+		IncluderController.page="work";
+
 		return Util.control(req, "work");
 	}
 	

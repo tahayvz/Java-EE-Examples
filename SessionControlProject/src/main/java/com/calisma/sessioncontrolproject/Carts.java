@@ -10,7 +10,14 @@ public class Carts {
 	private String cmail;
 	private String cpassword;
 	private String cnote;
+	private String searchtext;
 	
+	public String getSearchtext() {
+		return searchtext;
+	}
+	public void setSearchtext(String searchtext) {
+		this.searchtext = searchtext;
+	}
 	public String getCnote() {
 		return cnote;
 	}

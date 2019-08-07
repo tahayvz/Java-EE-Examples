@@ -22,9 +22,12 @@ public class DashBoardController {
 	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
 	public String dashboard(Model model, HttpServletRequest req) {
 		model.addAttribute("catData", catResult());
+		IncluderController.page="dashboard";
 		return Util.control(req, "dashboard");
 	}
 
+
+		
 	public List<CategoryPro> catResult() {
 		List<CategoryPro> ls = new ArrayList<CategoryPro>();
 			try {
