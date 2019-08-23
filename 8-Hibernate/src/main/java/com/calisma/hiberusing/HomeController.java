@@ -26,7 +26,16 @@ int editID;
 
 		Session sesi = sf.openSession(); 
 		
-		List<Users> ls = sesi.createQuery("from Users").list();
+		List<Users> ls = sesi.createQuery("from Users order by uid desc").setFirstResult(3).list();
+		/*	
+		 * List<Users> ls = sesi.createQuery("from Users").setMaxResults(1).list();
+		 * setMaxResults return 1 result
+		 * List<Users> ls = sesi.createQuery("from Users").setFirstResult(10).list();
+		 * first 10 result not shown others shown
+		 * if you write setFirstResult(20) for other page you can show 10 result for each page
+		 * List<Users> ls = sesi.createQuery("from Users order by uid desc").list();
+		 * desc sorts from big to small and asc sorts from small to big
+		 */
 		model.addAttribute("data", ls);
 
 		return "home";

@@ -34,6 +34,8 @@
 					<input type="submit" value="Kaydet" class="btn btn-success" />
 					
 				</form>
+				<br/>
+			    <a href="login" class="btn btn-primary">Login</a>
 			</div>
 			<div class="col-sm-8">
 				<h1>User List</h1>
@@ -45,8 +47,11 @@
 							<th scope="col">Surname</th>
 							<th scope="col">Mail</th>
 							<th scope="col">Password</th>
+							<th scope="col">Price</th>
+							<th scope="col">Image</th>
 							<th scope="col">Delete</th>
 							<th scope="col">Edit</th>
+
 						</tr>
 					</thead>
 					<tbody>
@@ -58,7 +63,6 @@
 			      <td>${item.uname}</td>
 			      <td>${item.usurname}</td>
 			      <td>${item.umail}</td>
-			      <td>${item.upassword}</td>
 			      <td>${item.upassword}</td>
 			        <td>${item.uprice }</td>
 				      <td><img src="${item.uimg}" width="150" class="img-responsive"/></td>
@@ -77,8 +81,6 @@
 
 			</div>
 		</div>
-
-
 
 	</div>
 </body>
