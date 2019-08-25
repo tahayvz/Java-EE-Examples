@@ -59,4 +59,22 @@ local.properties
 # JDT-specific (Eclipse Java Development Tools)     
 .classpath
 
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# Build Artifacts
+
+.gradle/
+build/
+target/
+bin/
+dependency-reduced-pom.xml
+
+
+# Compiled class file
+*.class
+
 # End of https://www.gitignore.io/api/eclipse
