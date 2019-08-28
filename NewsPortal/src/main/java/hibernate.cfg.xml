@@ -24,5 +24,6 @@
   <property name="hibernate.hbm2ddl.auto">update</property>
   <mapping class="model.News"/>
   <mapping class="model.Adminuser"/>
+  <mapping class="model.Category"/>
  </session-factory>
 </hibernate-configuration>

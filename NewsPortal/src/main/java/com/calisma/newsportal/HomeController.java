@@ -88,7 +88,7 @@ public class HomeController {
 		}
 		//login successful
 		else if(guestbool) {
-			return Util.control(req, "redirect:/guestnews");
+			return Util.controlguest(req, "redirect:/guestnews");
 
 		}
 		//unregistered user

@@ -6,37 +6,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>News Portal</title>
 <c:import url="/css"></c:import>
- <c:import url="/exitfunc"></c:import>  
-<%-- 
-<script>
-function alt() {
-	const cnf = confirm("Çıkış Yapmak istediğinizden Emin misiniz?");
-	if (cnf) {
-		return true;
-	} else {
-		return false;
-	}
-}
-</script>
---%>
+<c:import url="/exitfunc"></c:import>
+
 </head>
 <body>
 	<div class="container">
-		<c:import url="/navbar"></c:import>
+		<c:import url="/guestnavbar"></c:import>
 		<div class="row">
+
+
 			<table class="table">
+
 				<tbody>
 					<c:if test="${ not empty data }">
 						<c:forEach items="${ data }" var="item">
-							<div class="col-sm-3" style=" max-width: 18rem; height: 20rem;">
+							<div class="col-sm-3" style="max-width: 18rem; height: 20rem;">
 								<br /> <br /> <br />
-								<div class="card" style="max-width: 18rem; height: 18rem; min-width: 10rem;">
-									<a href='<s:url value="/news/${item.nid}"></s:url>'> <img class="card-img-top"
+								<div class="card"
+									style="max-width: 18rem; height: 18rem; min-width: 10rem;">
+									<a href="news/${item.nid}"> <img class="card-img-top"
 										src="${item.nurl}" alt="New 1"
-										style="width: %50; height: auto; max-height: 10rem"> <a />
+										style="width: %50; height: auto;"> <a />
 										<div class="card-body">
 											<h5 class="card-title">${item.ntitle}</h5>
 										</div>

@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>News Portal</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <c:import url="/css"></c:import>
 <c:import url="/exitfunc"></c:import>
 
@@ -15,10 +16,7 @@
 	<div class="container">
 		<c:import url="/guestnavbar"></c:import>
 		<div class="row">
-
-
 			<table class="table">
-
 				<tbody>
 					<c:if test="${ not empty data }">
 						<c:forEach items="${ data }" var="item">
@@ -26,7 +24,7 @@
 								<br /> <br /> <br />
 								<div class="card"
 									style="max-width: 18rem; height: 18rem; min-width: 10rem;">
-									<a href="news/${item.nid}"> <img class="card-img-top"
+									<a href='<s:url value="/guestnews/${item.nid}"></s:url>'> <img class="card-img-top"
 										src="${item.nurl}" alt="New 1"
 										style="width: %50; height: auto;"> <a />
 										<div class="card-body">

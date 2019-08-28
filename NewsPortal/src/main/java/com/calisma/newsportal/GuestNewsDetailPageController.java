@@ -23,7 +23,7 @@ public class GuestNewsDetailPageController {
 		Session sesi = sf.openSession();
 		News news = sesi.load(News.class, userId);
 		model.addAttribute("data", news);
-		return Util.control(req, "guestNewsDetailPage");
+		return Util.controlguest(req, "guestNewsDetailPage");
 	}
 		
 }

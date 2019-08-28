@@ -30,7 +30,6 @@
 										src="${item.nurl}" alt="New 1"
 										style="width: %50; height: auto;">
 										<div class="card-body">
-
 											<h5 class="card-title">${item.ntitle}</h5>
 											<a href='<s:url value="/editNews/${item.nid}"></s:url>'
 										class="btn btn-danger">Edit</a>

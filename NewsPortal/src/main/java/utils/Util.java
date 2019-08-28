@@ -9,22 +9,21 @@ public class Util {
 		
 		//sesion control		
 		boolean statu = req.getSession().getAttribute("admin") != null;
-		boolean statuguest = req.getSession().getAttribute("misafir") != null;
-		if(statu || statuguest) {		
+		if(statu ) {		
 			return page;		
 		}
 		
 		return "redirect:/";
 	}
-	
-	/*
-	public static String controlAdmin( HttpServletRequest req, String page) {
+
+public static String controlguest( HttpServletRequest req, String page) {
 		
 		//sesion control		
-		boolean statu= req.getSession().getAttribute("amail") != null;
-		if(statu) {		
+		boolean statuguest = req.getSession().getAttribute("misafir") != null;
+		if(( statuguest)) {		
 			return page;		
 		}
+		
 		return "redirect:/";
-	}*/
+	}
 }

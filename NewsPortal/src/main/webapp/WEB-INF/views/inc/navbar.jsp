@@ -22,17 +22,22 @@
          
        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Setings
+          Settings
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="editNews">Edit News</a>
           <a class="dropdown-item" href="deleteNews">Delete News</a>
+           <c:if test="${not empty cls}">
+		  <c:forEach items="${cls}" var="item">
+	      		<a class="dropdown-item" href='<s:url value="/categoryadmin/${item.ctname}"></s:url>'>${item.ctname}</a>			
+		  </c:forEach>
+		</c:if>	
           <div class="dropdown-divider"></div>
           <a onclick="return alt();" class="dropdown-item" href='<s:url value="/exit"></s:url>'>Exit</a>
         </div>
       </li>
         </ul>
-        <form action='<s:url value="search"></s:url>' class="form-inline my-2 my-lg-0">
+        <form action='<s:url value="/search"></s:url>' class="form-inline my-2 my-lg-0">
           <input name="q"  class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" value="${param.q}">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>

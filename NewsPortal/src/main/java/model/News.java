@@ -20,15 +20,18 @@ public class News implements java.io.Serializable {
 	private String nurl;
 	private String ntext;
 	private String ntexttwo;
+	private Integer ncid;
 
+	
 	public News() {
 	}
 
-	public News(String ntitle, String nurl, String ntext, String ntexttwo) {
+	public News(String ntitle, String nurl, String ntext, String ntexttwo, Integer ncid) {
 		this.ntitle = ntitle;
 		this.nurl = nurl;
 		this.ntext = ntext;
 		this.ntexttwo = ntexttwo;
+		this.ncid = ncid;
 	}
 
 	@Id
@@ -77,6 +80,15 @@ public class News implements java.io.Serializable {
 
 	public void setNtexttwo(String ntexttwo) {
 		this.ntexttwo = ntexttwo;
+	}
+	
+	@Column(name = "ncid", nullable = false)
+	public Integer getNcid() {
+		return this.ncid;
+	}
+
+	public void setNcid(Integer ncid) {
+		this.ncid = ncid;
 	}
 
 }
