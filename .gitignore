@@ -77,4 +77,6 @@ dependency-reduced-pom.xml
 # Compiled class file
 *.class
 
+/Servers
+
 # End of https://www.gitignore.io/api/eclipse
