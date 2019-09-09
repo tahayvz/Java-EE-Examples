@@ -2,6 +2,12 @@
 
 ### Eclipse ###
 
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
 .metadata
 bin/
 tmp/
@@ -41,8 +47,22 @@ local.properties
 # TeXlipse plugin
 .texlipse
 
-# STS (Spring Tool Suite)
+### STS (Spring Tool Suite)###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
 .springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
 
 # Code Recommenders
 .recommenders/
@@ -73,6 +93,8 @@ target/
 bin/
 dependency-reduced-pom.xml
 
+### VS Code ###
+.vscode/
 
 # Compiled class file
 *.class
