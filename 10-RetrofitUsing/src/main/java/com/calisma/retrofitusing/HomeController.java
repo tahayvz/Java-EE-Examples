@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import restUsing.API;
 import restUsing.Bilgiler;
+import restUsing.Category;
 import restUsing.JsonPro;
 import restUsing.Service;
 import retrofit2.Call;
@@ -33,7 +34,10 @@ public class HomeController {
 		//dt object keep overrides
 		Call<JsonPro> dt = service.allUser();
 		List<Bilgiler> ls=  dt.execute().body().getProducts().get(0).getBilgiler();
+
+
 		model.addAttribute("ls",ls);
+
 		/*  
 	 	//add all request within service to the queue
 		dt.enqueue(new Callback<JsonPro>() {
