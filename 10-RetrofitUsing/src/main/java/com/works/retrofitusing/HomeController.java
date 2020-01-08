@@ -1,4 +1,4 @@
-package com.calisma.retrofitusing;
+package com.works.retrofitusing;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,16 +12,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import restUsing.API;
 import restUsing.Bilgiler;
-import restUsing.Category;
 import restUsing.JsonPro;
 import restUsing.Service;
 import retrofit2.Call;
 
 @Controller
 public class HomeController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+		
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 * @throws IOException 
@@ -45,7 +42,7 @@ public class HomeController {
 			@Override
 			public void onResponse(Call<JsonPro> call, Response<JsonPro> response) {
 				JsonPro pr = response.body(); //pr keep datas in object form 
-				//java ee de string ifadelerden uzak durmak gerekir bu yüzden objelerle productname vs yakalanýr
+				//java ee de string ifadelerden uzak durmak gerekir bu yï¿½zden objelerle productname vs yakalanï¿½r
 //				String name = pr.getProducts().get(0).getBilgiler().get(0).getProductName(); //getProducts(),getBilgiler() and getProductName() are arrays. get(0) call first array
 //			System.out.println(name);
 			List<Bilgiler> ls = pr.getProducts().get(0).getBilgiler();

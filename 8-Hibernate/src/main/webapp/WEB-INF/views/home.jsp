@@ -29,7 +29,7 @@
 					<input value="${us.upassword }" name="upassword" type="password" class="form-control"
 						placeholder="upassword" /> <br />
 					<input value="${us.uprice }"  type="number" name="uprice" class="form-control" placeholder="Price"><br/>
-			<input value="${us.uimg }"  type="text" name="uimg" class="form-control" placeholder="Image URL"><br/>
+		        	<input value="${us.uimg }"  type="text" name="uimg" class="form-control" placeholder="Image URL"><br/>
 						
 					<input type="submit" value="Kaydet" class="btn btn-success" />
 					

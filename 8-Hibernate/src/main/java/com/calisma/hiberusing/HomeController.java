@@ -26,7 +26,7 @@ int editID;
 
 		Session sesi = sf.openSession(); 
 		
-		List<Users> ls = sesi.createQuery("from Users order by uid desc").setFirstResult(3).list();
+		List<Users> ls = sesi.createQuery("from Users order by uid desc").setFirstResult(0).list();
 		/*	
 		 * List<Users> ls = sesi.createQuery("from Users").setMaxResults(1).list();
 		 * setMaxResults return 1 result

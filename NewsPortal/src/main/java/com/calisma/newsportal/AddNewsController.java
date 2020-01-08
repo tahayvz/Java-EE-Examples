@@ -27,7 +27,8 @@ int editID;
 		Session session = sf.openSession();
 		List<Category> cls = session.createQuery("from Category").list();
 		model.addAttribute("ctgData", cls);
-		return Util.control(req, "addNews");
+//		return Util.control(req, "addNews");
+		return "addNews";
 	}
 
 	@RequestMapping(value = "/newinsert", method = RequestMethod.POST)

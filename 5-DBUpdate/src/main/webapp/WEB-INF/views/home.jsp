@@ -27,7 +27,7 @@
   			</div>
   			
   			<div class="form-group">
-  				<input name="cphone"  required="required"  class="form-control" type='tel' pattern='[0-9]{3}[0-9]{3}[0-9]{4}' maxlength="10"  title='Telefon No: 5556667788 '>
+  				<input name="cphone"  required="required"  class="form-control" type='tel' pattern='[0-9]{3}[0-9]{3}[0-9]{4}' maxlength="10"  title='Telefon No: 5556667788 ' placeholder="Telefon numarası">
   			</div>
   			
   			<div class="form-group">

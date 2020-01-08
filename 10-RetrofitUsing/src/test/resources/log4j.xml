@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.calisma.retrofitusing">
+	<logger name="com.works.retrofitusing">
 		<level value="info" />
 	</logger>
 	

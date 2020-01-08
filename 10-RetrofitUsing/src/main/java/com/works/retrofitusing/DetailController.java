@@ -1,4 +1,4 @@
-package com.calisma.retrofitusing;
+package com.works.retrofitusing;
 
 import java.io.IOException;
 import java.util.List;
@@ -20,7 +20,6 @@ import retrofit2.Call;
 @Controller
 public class DetailController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(DetailController.class);
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 * @throws IOException 
