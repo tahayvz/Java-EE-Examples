@@ -8,6 +8,7 @@
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportalusersporcategory.png" width="700"/>
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportalusertechcategory.png" width="700"/>
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportaluserexit.png" width="700"/>
+  
   #### Admin
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportallogin.png" width="700"/>
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportaldashboard.png" width="700"/>
