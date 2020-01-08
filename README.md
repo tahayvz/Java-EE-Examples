@@ -1,3 +1,3 @@
 
-  <img src="https://github.com/tahayvz/JavaEEExamples/blob/master/img/newsportaluserdashboard.PNG" width="200"/>
+  <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportaluserdashboard.PNG" width="200"/>
  
