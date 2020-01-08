@@ -1,8 +1,8 @@
 # Java-EE-Examples
 
-# PROJE EKRAN GÖRÜNTÜLERİ
- ###News Portal
-  ####User
+## PROJE EKRAN GÖRÜNTÜLERİ
+ ### News Portal
+  #### User
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportaluserdashboard.png" width="700"/>
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportalusersearch.png" width="700"/>
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportalusersporcategory.png" width="700"/>
