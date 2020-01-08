@@ -1,13 +1,10 @@
 # Java-EE-Examples
-**Table of Contents**
-
-[TOCM]
 
 # PROJE EKRAN GÖRÜNTÜLERİ
  ###News Portal
   ####User
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportaluserdashboard.PNG" width="200"/>
-   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportalusersearch.PNG" width="200"/>
+  <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportalusersearch.PNG" width="200"/>
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportalusersporcategory.PNG" width="200"/>
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportalusertechcategory.PNG" width="200"/>
   <img src="https://github.com/tahayvz/Java-EE-Examples/blob/master/img/newsportaluserexit.PNG" width="200"/>
