@@ -1,7 +1,4 @@
 # Java-EE-Examples
-**Table of Contents**
-
-[TOCM]
 
 # PROJE EKRAN GÖRÜNTÜLERİ
  ###News Portal
